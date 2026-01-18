@@ -1,0 +1,271 @@
+/* 2. Общие стили страницы */
+body {
+    font-family: Arial, sans-serif; /* [cite: 44] */
+    background-color: #f0f4f8; /* [cite: 44] (Светлый пастельный фон) */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Ограничиваем ширину основного контента 
+  и выравниваем его по центру [cite: 45] 
+*/
+.container {
+    max-width: 900px; /* [cite: 45] */
+    margin: 0 auto; /* [cite: 45] (Выравнивание по центру) */
+}
+
+/* 3. Оформление шапки сайта */
+header {
+    background-color: #ddebf7; /*  (Светло-голубой фон) */
+    padding: 20px; /* [cite: 49] (Внутренние отступы) */
+    text-align: center; /* [cite: 48] (Выравнивание h1 и p) */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 32px; 
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+/* 4. Навигационное меню */
+nav.menu {
+    background-color: #4a5568; /* (Фон для меню для наглядности) */
+    padding: 10px 0;
+    margin-bottom: 20px; /* Отступ под меню */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav.menu ul {
+    list-style-type: none; /* (Убираем маркеры списка) */
+    padding: 0;
+    margin: 0;
+    display: flex; /* [cite: 51] (Горизонтальное размещение) */
+    justify-content: center; /* (Центрирование пунктов) */
+}
+
+nav.menu ul li {
+    margin: 0 20px; /* [cite: 52] (Отступы между пунктами) */
+}
+
+nav.menu ul li a {
+    text-decoration: none; /* [cite: 54] (Убираем подчёркивание) */
+    color: #ffffff; /* [cite: 53] (Цвет текста) */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav.menu ul li a:hover {
+    color: #ddebf7; /* [cite: 53] (Изменение цвета при наведении) */
+}
+
+/* Стилизация секций */
+section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Заголовки внутри секций */
+section h2 {
+    font-size: 24px; /*  */
+    margin-bottom: 20px;
+    color: #2d3748;
+    border-bottom: 2px solid #ddebf7;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* 5. Раздел «О педагоге» */
+section#teacher {
+    background-color: #f8f8f8; /* [cite: 57] */
+}
+
+section#teacher h2 {
+    margin-bottom: 20px; /* [cite: 56] (Отступ между заголовком и текстом) */
+}
+
+section#teacher p {
+    line-height: 1.6; /* [cite: 58] (Межстрочный интервал) */
+}
+
+section#teacher img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    object-fit: cover;
+    /*  Тень и плавное увеличение */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*  Эффект при наведении на фото */
+section#teacher img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Контейнер-сетка для карточек [cite: 15] */
+.achievements-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Сама карточка [cite: 11] */
+.card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px; /* Фиксированная ширина для красоты, на мобильном изменим */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Небольшая анимация всплытия */
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #4a5568;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Стилизация формы (для аккуратности) */
+section#feedback div {
+    margin-bottom: 15px;
+}
+
+section#feedback label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section#feedback input[type="text"],
+section#feedback input[type="email"],
+section#feedback textarea {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Кнопка отправки */
+section#feedback button {
+    background-color: #4a5568;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+section#feedback button:hover {
+    background-color: #2d3748;
+}
+
+/* --- ЗАДАНИЕ №4: Подвал --- */
+footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+/* Ссылки соцсетей в подвале [cite: 23] */
+.footer-socials {
+    margin-bottom: 15px;
+}
+
+.footer-socials a {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* [cite: 26] Изменение цвета при наведении */
+.footer-socials a:hover {
+    color: #ddebf7;
+    border-color: #ddebf7;
+}
+
+footer p {
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+footer > a {
+    color: #ddebf7;
+    text-decoration: none;
+}
+
+/* --- ЗАДАНИЕ №3: Адаптивная вёрстка --- */
+/* [cite: 17, 18] Медиа-запрос для экранов < 768px */
+@media (max-width: 768px) {
+    
+    /* [cite: 21] Меню делаем вертикальным */
+    nav.menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav.menu ul li {
+        margin: 10px 0;
+    }
+
+    /* [cite: 19] Карточки вертикально (растягиваем на всю ширину) */
+    .card {
+        width: 100%; 
+    }
+
+    /* [cite: 20] Уменьшаем шрифты и отступы */
+    header h1 {
+        font-size: 24px;
+    }
+    
+    section h2 {
+        font-size: 20px;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+}
